@@ -2,5 +2,5 @@
 # Portfolio
 Basic portfolio using HTML
 
-<img width="1919" height="927" alt="Screenshot from 2026-07-14 16-06-20" src="https://github.com/user-attachments/assets/9f2df924-1c4a-4660-853f-82612c241ba7" />
-<img width="1919" height="602" alt="Screenshot from 2026-07-14 16-06-28" src="https://github.com/user-attachments/assets/e9ec8a61-bf8b-4c12-8710-9de67c78ccea" />
+<img width="1919" height="931" alt="Screenshot from 2026-07-21 14-35-54" src="https://github.com/user-attachments/assets/178f6a05-9655-4c3a-b616-dde24def82cc" />
+<img width="1919" height="931" alt="Screenshot from 2026-07-21 14-36-18" src="https://github.com/user-attachments/assets/6ec09aa9-5831-4119-8464-3e6eb951a637" />
