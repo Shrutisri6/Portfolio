@@ -1,176 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f4f6f9;
-    color:#333;
-    line-height:1.6;
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-top: 30px;
 }
 
-h1{
-    text-align:center;
-    margin-top:30px;
-    color:#1e3a8a;
-    font-size:42px;
+body > p {
+    text-align: center;
 }
 
-body>p{
-    text-align:center;
-    font-size:18px;
-    color:#666;
-    margin-bottom:20px;
+nav {
+    background: #1e3a8a;
+    text-align: center;
+    padding: 15px;
 }
 
-nav{
-    background:#1e3a8a;
-    text-align:center;
-    padding:15px;
-    position:sticky;
-    top:0;
-    z-index:1000;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 20px;
-    font-size:17px;
-    font-weight:500;
-    transition:.3s;
+nav a:hover {
+    color: #fbbf24;
 }
 
-nav a:hover{
-    color:#fbbf24;
+section {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
 }
 
-section{
-    width:80%;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+h2 {
+    color: #1e3a8a;
 }
 
-section h2{
-    color:#1e3a8a;
-    margin-bottom:20px;
-    border-bottom:3px solid #1e3a8a;
-    display:inline-block;
-    padding-bottom:5px;
+h3 {
+    color: #2563eb;
 }
 
-section h3{
-    margin-top:20px;
-    color:#2563eb;
+li {
+    margin: 8px 0;
 }
 
-section p{
-    margin-top:10px;
+article {
+    background: #eef4ff;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
 }
 
-ul{
-    margin-left:20px;
+button {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-li{
-    margin:10px 0;
+button:hover {
+    background: #2563eb;
 }
 
-article{
-    background:#eef4ff;
-    padding:20px;
-    border-radius:10px;
-    margin:20px 0;
-    transition:.3s;
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
 }
 
-article:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
+#contact a {
+    display: inline-block;
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 10px 0 0;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-#contact a{
-    display:inline-block;
-    margin:15px 15px 0 0;
-    padding:10px 18px;
-    background:#1e3a8a;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    transition:.3s;
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
 }
 
-#contact a:hover{
-    background:#2563eb;
+.dark {
+    background: #222;
+    color: white;
 }
 
-hr{
-    border:none;
-    height:1px;
-    background:#ddd;
-    width:80%;
-    margin:auto;
+.dark section {
+    background: #333;
 }
 
-footer{
-    background:#1e3a8a;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-
-@media (max-width:768px){
-
-    h1{
-        font-size:32px;
+@media (max-width: 600px) {
+    section {
+        width: 90%;
     }
 
-    body>p{
-        font-size:16px;
-        padding:0 15px;
+    nav a {
+        display: block;
+        margin: 8px;
     }
+}
 
-    nav{
-        padding:10px;
-    }
 
-    nav a{
-        display:block;
-        margin:10px 0;
-    }
+.repoButton {
+    display: inline-block;
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-    section{
-        width:95%;
-        padding:20px;
-    }
-
-    section h2{
-        font-size:24px;
-    }
-
-    section h3{
-        font-size:20px;
-    }
-
-    article{
-        padding:15px;
-    }
-
-    #contact a{
-        display:block;
-        text-align:center;
-        margin:10px 0;
-    }
-
-    footer{
-        font-size:14px;
-    }
+.repoButton:hover {
+    background: #2563eb;
 }
