@@ -1,4 +1,4 @@
-/* Simple beginner-friendly portfolio styles */
+
 
 * {
     box-sizing: border-box;
@@ -142,8 +142,6 @@ footer {
     color: white;
     padding: 12px;
 }
-
-/* Dark mode is added by JavaScript */
 body.dark {
     background-color: #222831;
     color: #eeeeee;
