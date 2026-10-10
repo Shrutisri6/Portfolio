@@ -1,19 +1,8 @@
-let themeButton = document.getElementById("themeButton");
 
-themeButton.addEventListener("click", function() {
-    document.body.classList.toggle("dark");
+const aboutButton = document.getElementById("aboutButton");
+const aboutText = document.getElementById("aboutText");
 
-    if (document.body.classList.contains("dark")) {
-        themeButton.textContent = "Light Mode";
-    } else {
-        themeButton.textContent = "Dark Mode";
-    }
-});
-
-let aboutButton = document.getElementById("aboutButton");
-let aboutText = document.getElementById("aboutText");
-
-aboutButton.addEventListener("click", function() {
+aboutButton.addEventListener("click", function () {
     if (aboutText.style.display === "none") {
         aboutText.style.display = "block";
         aboutButton.textContent = "Hide More About Me";
@@ -23,47 +12,56 @@ aboutButton.addEventListener("click", function() {
     }
 });
 
-let addSkillButton = document.getElementById("addSkillButton");
-let skillInput = document.getElementById("skillInput");
-let skillList = document.getElementById("skillList");
-let message = document.getElementById("message");
 
-addSkillButton.addEventListener("click", function() {
-    let skillName = skillInput.value.trim();
+const addSkillButton = document.getElementById("addSkillButton");
+const skillInput = document.getElementById("skillInput");
+const skillList = document.getElementById("skillList");
+const message = document.getElementById("message");
+
+addSkillButton.addEventListener("click", function () {
+    const skillName = skillInput.value.trim();
 
     if (skillName === "") {
-        message.textContent = "Please type a skill first.";
-        return;
+        message.textContent = "Please enter a skill first.";
+    } else {
+        const newSkill = document.createElement("li");
+        newSkill.textContent = skillName;
+        skillList.appendChild(newSkill);
+
+        skillInput.value = "";
+        message.textContent = "Skill added!";
     }
-
-    let newSkill = document.createElement("li");
-    newSkill.textContent = skillName;
-    skillList.appendChild(newSkill);
-
-    skillInput.value = "";
-    message.textContent = "New skill added!";
 });
 
-let contactForm = document.getElementById("contactForm");
-let formMessage = document.getElementById("formMessage");
+skillInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        addSkillButton.click();
+    }
+});
 
-contactForm.addEventListener("submit", function(event) {
+const themeButton = document.getElementById("themeButton");
+
+themeButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        themeButton.textContent = "Light Mode";
+    } else {
+        themeButton.textContent = "Dark Mode";
+    }
+});
+
+
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let userMessage = document.getElementById("userMessage").value.trim();
+    const visitorName = document.getElementById("name").value.trim();
 
-    if (name === "" || email === "" || userMessage === "") {
-        formMessage.textContent = "Please fill in all the fields.";
-        return;
-    }
+    formMessage.textContent = "Thank you, " + visitorName +
+        "! This is a demo form, so your message has not been sent.";
 
-    if (!email.includes("@")) {
-        formMessage.textContent = "Please enter a valid email address.";
-        return;
-    }
-
-    formMessage.textContent = "Thank you! Your message is ready to be sent.";
     contactForm.reset();
 });
