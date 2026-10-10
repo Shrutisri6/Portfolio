@@ -1,133 +1,200 @@
+/* Simple beginner-friendly portfolio styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f9;
-    color: #333;
     margin: 0;
+    background-color: #f2f5f8;
+    color: #333333;
     line-height: 1.6;
 }
 
-h1 {
+header {
+    background-color: #355c7d;
+    color: white;
     text-align: center;
-    color: #1e3a8a;
-    margin-top: 30px;
+    padding: 25px 15px;
 }
 
-body > p {
-    text-align: center;
+header h1 {
+    margin-bottom: 5px;
 }
 
 nav {
-    background: #1e3a8a;
-    text-align: center;
-    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 18px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 15px;
 }
 
 nav a:hover {
-    color: #fbbf24;
+    text-decoration: underline;
 }
 
 section {
-    width: 80%;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-}
-
-h2 {
-    color: #1e3a8a;
-}
-
-h3 {
-    color: #2563eb;
-}
-
-li {
-    margin: 8px 0;
-}
-
-article {
-    background: #eef4ff;
-    padding: 15px;
-    margin: 15px 0;
+    background-color: white;
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 22px;
     border-radius: 8px;
 }
 
+h2 {
+    color: #355c7d;
+    margin-top: 0;
+}
+
+article {
+    border: 1px solid #dddddd;
+    padding: 16px;
+    margin: 15px 0;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+.repoButton,
+.social-links a {
+    display: inline-block;
+    background-color: #355c7d;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 5px 5px 5px 0;
+    border-radius: 4px;
+}
+
+.repoButton:hover,
+.social-links a:hover {
+    background-color: #24415a;
+}
+
 button {
-    background: #1e3a8a;
+    background-color: #355c7d;
     color: white;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
+    padding: 10px 14px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #2563eb;
+    background-color: #24415a;
 }
 
-input, textarea {
-    width: 90%;
+input,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 500px;
     padding: 10px;
-    margin: 5px 0;
+    margin: 6px 0 14px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    font: inherit;
 }
 
-#contact a {
-    display: inline-block;
-    background: #1e3a8a;
-    color: white;
-    padding: 10px 15px;
-    margin: 10px 10px 0 0;
-    text-decoration: none;
-    border-radius: 5px;
+textarea {
+    resize: vertical;
+}
+
+.skill-entry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-entry input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+#message,
+#formMessage {
+    color: #245b3f;
+}
+
+.theme-area {
+    text-align: center;
+    margin: 25px;
 }
 
 footer {
-    background: #1e3a8a;
-    color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-}
-
-.dark {
-    background: #222;
+    background-color: #355c7d;
     color: white;
+    padding: 12px;
 }
 
-.dark section {
-    background: #333;
+/* Dark mode is added by JavaScript */
+body.dark {
+    background-color: #222831;
+    color: #eeeeee;
+}
+
+body.dark section {
+    background-color: #303841;
+}
+
+body.dark article {
+    background-color: #38434e;
+    border-color: #52606d;
+}
+
+body.dark h2 {
+    color: #9bc4e2;
+}
+
+body.dark input,
+body.dark textarea {
+    background-color: #eeeeee;
+    color: #222222;
 }
 
 @media (max-width: 600px) {
+    header {
+        padding: 20px 12px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    nav {
+        gap: 8px 12px;
+    }
+
     section {
-        width: 90%;
+        margin: 12px;
+        padding: 16px;
     }
 
-    nav a {
+    .skill-entry {
         display: block;
-        margin: 8px;
     }
-}
 
+    .skill-entry input {
+        margin-bottom: 10px;
+    }
 
-.repoButton {
-    display: inline-block;
-    background: #1e3a8a;
-    color: white;
-    padding: 10px 15px;
-    margin: 5px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.repoButton:hover {
-    background: #2563eb;
+    .repoButton {
+        margin-top: 5px;
+    }
 }
